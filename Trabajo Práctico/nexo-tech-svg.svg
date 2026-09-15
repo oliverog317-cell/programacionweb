@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="100%" height="100%">
+  <defs>
+    <!-- Filtro de sombra suave para el cubo -->
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- 1. Fondo de la Navbar (Blanco) -->
+  <!-- Nota: Puedes cambiar fill="#FFFFFF" a fill="none" si necesitas que el fondo sea 100% transparente -->
+  <rect width="100%" height="100%" fill="#FFFFFF" rx="8" />
+
+  <g transform="translate(10, 0)">
+    <!-- 2. Círculo de fondo sutil usando el color de Fondo de la página -->
+    <circle cx="70" cy="60" r="42" fill="#F7FAFF" />
+    
+    <!-- 3. Isotipo (El Cubo / Nexo) -->
+    <g filter="url(#shadow)">
+      <!-- Cara Superior (Botón principal - Cyan) -->
+      <path d="M 70 30 L 96 45 L 70 60 L 44 45 Z" 
+            fill="#00BFFF" 
+            stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" />
+            
+      <!-- Cara Izquierda (Categorías - Violeta) -->
+      <path d="M 44 45 L 70 60 L 70 90 L 44 75 Z" 
+            fill="#7657FF" 
+            stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" />
+            
+      <!-- Cara Derecha (Botones secundarios/Precios - Azul Marino) -->
+      <path d="M 96 45 L 70 60 L 70 90 L 96 75 Z" 
+            fill="#123B7A" 
+            stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" />
+    </g>
+
+    <!-- 4. Nodo de conexión central (Ofertas/Descuentos - Amarillo) -->
+    <circle cx="70" cy="60" r="11" fill="#FFC107" opacity="0.25" />
+    <circle cx="70" cy="60" r="4.5" fill="#FFC107" />
+    
+    <!-- Detalles de circuito -->
+    <line x1="96" y1="75" x2="112" y2="75" stroke="#E2E8F0" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="112" cy="75" r="2" fill="#E2E8F0" />
+  </g>
+
+  <!-- 5. Tipografía del Logotipo (Centrada verticalmente) -->
+  <g transform="translate(138, 0)">
+    <text y="75" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="48" letter-spacing="-1.5">
+      <!-- "Nexo" (Títulos - Pizarra oscuro) -->
+      <tspan font-weight="800" fill="#0F172A">Nexo</tspan>
+      <!-- "Tech" (Botón principal - Cyan) -->
+      <tspan font-weight="800" fill="#00BFFF">Tech</tspan>
+    </text>
+  </g>
+</svg>
